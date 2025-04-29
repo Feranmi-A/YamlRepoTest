@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest # we want the yaml file to run the test on the latest ubuntu server
     steps: 
       - name: Checkout code  # the first step in our test is to check out the code
-        uses: actions/checkout@v2  # This is the action that will check out the code
+        uses: actions/checkout@v4  # This is the action that will check out the code
       - name: Run Super-Linter     # The second test is to then use super linter to check the code for best practices        
         uses: github/super-linter@v7  # We want the super linter to use version 7
         env:                   # The environment we want the test to get our code from
