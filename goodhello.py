@@ -1,14 +1,15 @@
-"""This module contains simple greeting function used for demo purposes"""
+"""This module prints greetings using simple functions."""
+
 def hello():
-    """Prints a greeting"""
-    print("hi")
+    """Prints a simple greeting."""
+    print("Hello, DevOps learner!")
 
 
 def bye():
-    """Prints a goodbye message"""
-    print("bye")
+    """Prints a simple farewell."""
+    print("Goodbye!")
 
 
 if __name__ == "__main__":
     hello()
-    
+    bye()
