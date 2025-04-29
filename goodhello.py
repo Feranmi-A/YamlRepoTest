@@ -1,3 +1,4 @@
+"""This module contains simple greeting function used for demo purposes"""
 def hello():
     """Prints a greeting"""
     print("hi")
@@ -5,7 +6,7 @@ def hello():
 
 def bye():
     """Prints a goodbye message"""
-    print("bye") 
+    print("bye")
 
 
 if __name__ == "__main__":
