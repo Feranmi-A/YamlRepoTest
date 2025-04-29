@@ -1,9 +1,12 @@
 def hello():
+    """Prints a greeting"""
     print("hi")
 
 
 def bye():
+    """Prints a goodbye message"""
     print("bye") 
 
 
-print(hello())
+if __name__ == "__main__":
+    hello()
