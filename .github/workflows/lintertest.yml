@@ -9,7 +9,7 @@ jobs:
       - name: Checkout code  # the first step in our test is to check out the code
         uses: actions/checkout@v2  # This is the action that will check out the code
       - name: Run Super-Linter     # The second test is to then use super linter to check the code for best practices        
-        uses: github/super-linter@v3  # We want the super linter to use version 4
+        uses: github/super-linter@v7  # We want the super linter to use version 4
         env:                   # The environment we want the test to get our code from
           DEFAULT_BRANCH: main # The branch of the code (if yours is master then change this to master)
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
