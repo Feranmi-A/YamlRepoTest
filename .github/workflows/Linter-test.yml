@@ -1,28 +1,13 @@
-name: Python Pytest CI
+name: Super-Linter
+ 
+on: push #This means the action will start whenever any code is pushed into this repository
+jobs: 
+  super-lint:   # The job we are calling to test our code is the super lint job
+    name: Lint code base 
+    runs-on: ubuntu-latest # we want the yaml file to run the test on the latest ubuntu server
+    steps: 
+      - name: Checkout code  # the first step in our test is to check out the code
+        uses: actions/checkout@v4  # This is the action that will check out the code
+      - name: Run Super-Linter goodhello.py     # The second test is to then use super linter to check the code for best practices        
+        uses: github/super-linter@v7  # We want the super linter to use version 7
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
-jobs:
-  test:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.13.3'
-
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install pytest
-
-      - name: Run pytest
-        run: pytest goodhello.py
