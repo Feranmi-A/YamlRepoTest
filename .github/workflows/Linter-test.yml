@@ -10,4 +10,7 @@ jobs:
         uses: actions/checkout@v4  # This is the action that will check out the code
       - name: Run Super-Linter goodhello.py     # The second test is to then use super linter to check the code for best practices        
         uses: github/super-linter@v7  # We want the super linter to use version 7
+        env:                   # The environment we want the test to get our code from
+          DEFAULT_BRANCH: main # The branch of the code (if yours is master then change this to master)
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
