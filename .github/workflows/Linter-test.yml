@@ -21,14 +21,9 @@ jobs:
 
       - name: Install dependencies
         run: |
-          # python -m pip install --upgrade pip
-          pip install pytest
+          python -m pip install --upgrade pip
+          pip install pytest-8.3.5
+		  pip install pluggy-1.5.0
 
       - name: Run pytest
-<<<<<<< HEAD
         run: pytest test_main.py
-=======
-        run: |
-          pytest
-
->>>>>>> 9f64ccf2efceaf6bc466694c9d4b9d1d95f53131
